@@ -33,7 +33,7 @@ var CAST = {
 * @param {Object} example key-value pairs where values are of desired types
 * @returns {Object} a new Object with same properties as input but with cast values
 */
-function castPropertyValues (input, example) {
+function castPropertyTypes (input, example) {
   var output;
   if (!input || typeof input !== 'object') {
     throw new TypeError('1st argument must be an Object');
@@ -61,4 +61,4 @@ function castPropertyValues (input, example) {
   return output;
 }
 
-module.exports = castPropertyValues;
+module.exports = castPropertyTypes;

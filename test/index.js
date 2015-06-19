@@ -6,28 +6,28 @@ var test = require('tape');
 
 // local modules
 
-var castPropertyValues = require('..');
+var castPropertyTypes = require('..');
 
 // this module
 
 require('tape-chai');
 
-test('castPropertyValues', function (t) {
+test('castPropertyTypes', function (t) {
 
   t.test('is a function', function (tt) {
-    tt.isFunction(castPropertyValues);
+    tt.isFunction(castPropertyTypes);
     tt.end();
   });
 
   t.test('throws an error for bad parameters', function (tt) {
     tt['throws'](function () {
-      castPropertyValues(null, null);
+      castPropertyTypes(null, null);
     }, Error);
     tt['throws'](function () {
-      castPropertyValues({}, null);
+      castPropertyTypes({}, null);
     }, Error);
     tt['throws'](function () {
-      castPropertyValues(null, {});
+      castPropertyTypes(null, {});
     }, Error);
     tt.end();
   });
@@ -88,7 +88,7 @@ test('casting values', function (t) {
     o: fixture.o,
     a: fixture.a
   };
-  result = castPropertyValues(fixture, example);
+  result = castPropertyTypes(fixture, example);
 
   t.test('input and output share same number of properties', function (tt) {
     tt.lengthOf(Object.keys(result), Object.keys(fixture).length);
