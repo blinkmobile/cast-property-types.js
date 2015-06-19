@@ -24,12 +24,13 @@
   },
   "homepage": "https://github.com/blinkmobile/cast-property-types.js#readme",
   "devDependencies": {
-    "browserify": "^10.2.4",
+    "browserify": "^10.2",
     "eslint": "^0.23.0",
-    "eslint-config-semistandard": "^4.0.0",
-    "eslint-config-standard": "^3.3.0",
+    "eslint-config-semistandard": "^4.0",
+    "eslint-config-standard": "^3.3",
     "istanbul": "^0.3.15",
-    "tape": "^4.0.0"
+    "tape": "^4.0",
+    "tape-chai": "^1.1"
   },
   "files": [
     "dist/index.js",
