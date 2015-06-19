@@ -4,7 +4,7 @@
   "description": "coerce properties within an Object to other types",
   "main": "index.js",
   "scripts": {
-    "build": "browserify -s castPropertyValues -o dist/index.js",
+    "build": "browserify -s castPropertyValues  -e . -o dist/index.js",
     "pretest": "npm run build",
     "test": "eslint . && istanbul cover test"
   },
@@ -28,7 +28,8 @@
     "eslint": "^0.23.0",
     "eslint-config-semistandard": "^4.0.0",
     "eslint-config-standard": "^3.3.0",
-    "istanbul": "^0.3.15"
+    "istanbul": "^0.3.15",
+    "tape": "^4.0.0"
   },
   "files": [
     "dist/index.js",
